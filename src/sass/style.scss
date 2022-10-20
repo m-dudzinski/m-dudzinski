@@ -1,0 +1,272 @@
+@use 'colors' as c;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  background-color: c.$white;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: c.$white;
+}
+
+#home,
+#aboutme,
+#portfolio,
+#contact {
+  scroll-margin-top: 80px;
+}
+
+.cookies-hide {
+  display: none;
+}
+
+.cookies-container {
+  position: fixed;
+  bottom: 0;
+  padding: 10px;
+  min-height: 120px;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  background-color: c.$sandy;
+  opacity: 0;
+  transform: translateY(100%);
+  animation: show-cookies 0.5s 0.5s forwards;
+  z-index: 9;
+
+  .cookies {
+    max-width: 900px;
+  }
+
+  .cookies-btn {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: 2px solid c.$black;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+  }
+
+  .cookies-btn:hover,
+  .cookies-btn:focus {
+    outline: none;
+    background-color: c.$blue;
+  }
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+.nav {
+  .nav-box {
+    position: fixed;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+    z-index: 10;
+    ul {
+      display: flex;
+      gap: 15px;
+      padding: 10px 20px;
+      list-style: none;
+      background-color: c.$orange;
+      border-radius: 30px;
+
+      img {
+        width: 45px;
+        height: 30px;
+      }
+    }
+  }
+}
+
+.header {
+  margin-top: 80px;
+
+  &__text {
+    margin: 20px;
+    text-align: center;
+  }
+
+  .hello {
+    font-size: 3.1rem;
+  }
+
+  .name {
+    font-size: 3.6rem;
+  }
+
+  .name-span {
+    text-transform: uppercase;
+    font-size: 4.2rem;
+    color: c.$orange;
+  }
+
+  .job {
+    padding: 5px;
+    display: inline-block;
+    background-color: c.$orange;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+  }
+  .introduction {
+    text-align: justify;
+  }
+
+  .header-btn {
+    margin: 30px 0;
+    padding: 10px;
+    font-size: 1.7rem;
+    background-color: c.$orange;
+    border: none;
+    border-radius: 19px;
+    box-shadow: 0px 8px 16px c.$orange;
+    color: c.$white;
+    cursor: pointer;
+  }
+
+  &__photo {
+    margin: 20px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+main {
+  h1 {
+    margin: 50px 0;
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    border: 2px outset c.$black;
+    background-color: c.$blue;
+    color: c.$white;
+  }
+
+  a,
+  a:visited {
+    color: c.$black;
+  }
+
+  .aboutme,
+  .portfolio,
+  .contact {
+    margin: 0 20px;
+  }
+
+  .aboutme,
+  .portfolio {
+    text-align: justify;
+  }
+
+  .aboutme-box {
+    &__text {
+      margin-bottom: 20px;
+    }
+
+    &__logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        height: 70px;
+        margin: 10px 15px;
+      }
+    }
+  }
+
+  .portfolio-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__element {
+      margin-bottom: 50px;
+
+      img {
+        display: block;
+        margin: 20px auto;
+        padding: 2px;
+        width: 200px;
+        height: 200px;
+        border: 1px solid c.$sandy;
+      }
+
+      .project-title {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .contact {
+    img {
+      height: 60px;
+      width: 60px;
+    }
+
+    .contact-box {
+      margin: 30px 0;
+      text-align: center;
+
+      &__element {
+        margin: 10px 0;
+        font-size: 1.9rem;
+      }
+    }
+
+    .social-box {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 40px;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.footer-signature {
+  margin-top: 80px;
+  padding: 10px;
+  border-top: 1px solid c.$sandy;
+  text-align: center;
+}
+
+@keyframes show-cookies {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@import 'sizeS';
+@import 'sizeL';

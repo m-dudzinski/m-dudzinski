@@ -1,0 +1,17 @@
+@media (min-width: 576px) {
+  .header {
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    &__text {
+      width: 60%;
+    }
+
+    &__photo {
+      width: 40%;
+    }
+  }
+}
