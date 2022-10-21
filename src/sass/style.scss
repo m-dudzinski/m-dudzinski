@@ -252,6 +252,44 @@ main {
       font-size: 1.4rem;
     }
   }
+
+  .privacy {
+    margin: 80px 0 150px 0px;
+    padding: 10px;
+
+    h1 {
+      margin: 10px;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    span,
+    a,
+    a:visited {
+      color: c.$orange;
+    }
+
+    .sub-title {
+      margin: 40px 0 10px 0;
+      text-align: center;
+    }
+
+    .languages {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        display: inline;
+      }
+
+      img {
+        height: 60px;
+      }
+    }
+  }
 }
 
 .footer-signature {
