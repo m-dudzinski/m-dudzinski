@@ -1,8 +1,6 @@
 <div align="center">
 
-# 💫 About me:
-
-✋ I am currently at the beginning of my path <br>on the way to taking my first job as a Frontend Developer. <br><br>💻 In the meantime, I am focusing on commercial <br>projects and expanding my portfolio. <br>
+✋ Hi there! <br>
 
 <br><br>Feel free to contact me on:
 
